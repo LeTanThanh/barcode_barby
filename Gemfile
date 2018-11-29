@@ -14,6 +14,17 @@ gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem "bootstrap-sass"
+gem "jquery-rails"
+gem "pry-rails"
+gem "config"
+gem "draper"
+gem "carrierwave"
+
+gem "rqrcode"
+gem "chunky_png"
+gem "barby"
+
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
 end

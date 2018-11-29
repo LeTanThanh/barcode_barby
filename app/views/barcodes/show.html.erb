@@ -1,0 +1,16 @@
+<p>
+  <strong>uid:</strong>
+  <%= @barcode.uid %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @barcode.decorate.symbology_text %>
+</p>
+
+<p>
+  <strong>Barcode Image:</strong><br>
+  <%= image_tag @barcode.image_url %><br>
+</p>
+
+<%= link_to "Back", root_path %>

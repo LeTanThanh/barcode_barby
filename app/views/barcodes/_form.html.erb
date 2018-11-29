@@ -1,0 +1,33 @@
+<%= form_for @barcode, html: {class: "form-horizontal"} do |form| %>
+  <% if @barcode.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@barcode.errors.count, "error") %> prohibited this barcode from being saved:</h2>
+
+      <ul>
+      <% @barcode.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group field">
+    <%= form.label :uid, class: "control-label col-sm-2" %>
+    <div class="col-sm-10">
+      <%= form.text_field :uid, class: "form-control", readonly: true %>
+    </div>
+  </div>
+
+  <div class="form-group field">
+    <%= form.label :symbology, class: "control-label col-sm-2" %>
+    <div class="col-sm-10">
+      <%= form.select :symbology, options_for_select(barcode_symbology_choices), {}, {class: "form-control"}  %>
+    </div>
+  </div>
+
+  <div class="form-group actions">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= form.submit class: "btn btn-info" %>
+    </div>
+  </div>
+<% end %>
